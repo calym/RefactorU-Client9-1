@@ -2,21 +2,23 @@
 // the given delimeter.
 // e.g. join(['one', 'two', 'three'], ' and ') 
 // returns: 'one and two and three'
+var join = function(arr, delimeter) {
+ var output = '';
+ for(var i=0; i<arr.length-1; i++) {
+  output += arr[i] + delimeter;
+ }
+ return output + arr.slice(-1);
+};
+
+
+
 // var join = function(arr, delimeter) {
-//  var output = '';
+//  var output;
 //  for(var i=0; i<arr.length; i++) {
-//   output += arr[i] + delimeter;
+//   output += arr[i];
+//   if (i != arr.length -1) {
+//   	output += delimeter;
+//   }
 //  }
 //  return output;
 // };
-
-var join = function(arr, delimeter) {
- 
- for(var i=0; i<arr.length; i++) {
-  var  output += arr[i];
-  if (i != arr.length -1) {
-  	output += delimeter;
-  }
- }
- return output;
-};

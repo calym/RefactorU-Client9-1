@@ -5,7 +5,7 @@
 // });
 
 describe('join', function() {
-  it('should do something',function() {
+  it('should join elements together using a delimiter',function() {
     expect(join(['one','two','three','four']," and ")).toBe('one and two and three and four');
   });
 });
